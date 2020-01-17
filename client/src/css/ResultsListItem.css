@@ -1,0 +1,187 @@
+.ResultsListItem {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.ResultsListItem:after {
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem;
+    height: 100%;
+    z-index: 5;
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.ResultsListItem .album-info {
+    position: relative;
+}
+
+.ResultsListItem .album-info:before {
+    content: "";
+    display: table;
+}
+
+.ResultsListItem .album-info:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ResultsListItem .album-image {
+    float: left;
+    margin-right: 1rem;
+    width: 64px;
+    position: relative;
+}
+
+.ResultsListItem .album-image:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.75) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ResultsListItem .album-image:after {
+    content: "Listen on Spotify";
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #1ED760;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ResultsListItem img {
+    display: block;
+    width: 100%;
+}
+
+.ResultsListItem h2,
+.ResultsListItem h3 {
+    white-space: nowrap;
+}
+
+.ResultsListItem h2 {
+    margin: 0.6em 0 0 0;
+    font-size: 1em;
+    transition: color 0.2s ease;
+}
+
+.ResultsListItem:hover h2 {
+    color: #1ED760;
+}
+
+.ResultsListItem h3 {
+    margin: 0.4em 0 0 0;
+    font-size: 0.7em;
+    color: #919496;
+}
+
+.ResultsListItem .album-link {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.ResultsListItem .album-link span {
+    visibility: hidden;
+}
+
+@media (min-width: 600px) {
+    .ResultsListItem {
+        width: 50%;
+    }
+
+    .ResultsListItem:nth-of-type(odd){
+        padding-right: 0.5rem;
+    }
+
+    .ResultsListItem:nth-of-type(even){
+        padding-left: 0.5rem;
+    }
+}
+
+@media (min-width: 600px) and (orientation: portrait) {
+    .ResultsListItem .album-image {
+        width: 88px;
+    }
+
+    .ResultsListItem h2 {
+        margin: 1.3em 0 0 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .ResultsListItem {
+        font-size: 1.2rem;
+    }
+
+    .ResultsListItem .album-image {
+        width: 128px;
+    }
+
+    .ResultsListItem h2 {
+        margin: 1.9em 0 0 0;
+    }
+
+    .ResultsListItem:hover .album-image:before,
+    .ResultsListItem:hover .album-image:after {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ResultsListItem {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+    }
+
+    .ResultsListItem:after {
+        display: none;
+    }
+
+    .ResultsListItem:nth-of-type(odd){
+        padding-right: 1rem;
+    }
+
+    .ResultsListItem:nth-of-type(even){
+        padding-left: 1rem;
+    }
+
+    .ResultsListItem .album-image {
+        width: 256px;
+        margin-right: 2rem;
+    }
+
+    .ResultsListItem h2,
+    .ResultsListItem h3 {
+        white-space: normal;
+    }
+
+    .ResultsListItem h2 {
+        margin: 3.5em 0 0 0;
+    }
+}

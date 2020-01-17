@@ -1,0 +1,12 @@
+#search_filter {
+    display: block;
+    width: 100%;
+    max-width: 27rem;
+    border: 2px solid #ffffff;
+    border-radius: 500px;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
