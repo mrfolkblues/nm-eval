@@ -15,9 +15,8 @@ Create a responsive (phone, tablet, desktop) web application that allows the use
     ```
     I can provide my `.env` file if you're someone that should have that sort of thing. Contact me via email.
 3. Change into `/api` and run `npm install`. This is the **Node/Express** server.
-4. Run `npm start` to start the server. The server's URL will be [localhost:9000](http://localhost:9000/).
-5. Change into `/client` and run `npm install`. This is the front end application built in **React**.
-6. Run `npm start` to start it up. The application's URL will be [localhost:3000](http://localhost:3000/). It should open in a browser automatically.
+4. Change into `/client` and run `npm install`. This is the front end application built in **React**.
+5. Change back up to the root folder and run `npm start`. This will bring the server online and then the client. The server's URL will be [localhost:9000](http://localhost:9000/). The application's URL will be [localhost:3000](http://localhost:3000/). The client should open in your browser automatically.
 
 
 ## Usage
